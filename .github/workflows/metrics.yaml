@@ -5,7 +5,7 @@ on: workflow_dispatch
 jobs:
   readme-metrics:
     runs-on: ubuntu-latest
-    uses: yonycalsin/readme-workflows/.github/workflows/metrics.yaml
+    uses: yonycalsin/readme-workflows/.github/workflows/metrics.yaml@626f75f24f7f33b8fb894b53f461db234766a419
     with:
       branch: 'main'
     secrets:
