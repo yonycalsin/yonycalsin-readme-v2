@@ -1,0 +1,13 @@
+name: Readme Metrics
+
+on: workflow_dispatch
+
+jobs:
+  readme-metrics:
+    runs-on: ubuntu-latest
+    uses: yonycalsin/readme-workflows/.github/workflows/metrics.yaml
+    with:
+      branch: 'main'
+    secrets:
+      METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+      COMMITTER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
