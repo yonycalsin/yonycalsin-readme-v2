@@ -5,9 +5,10 @@ on: workflow_dispatch
 jobs:
   readme-metrics:
     runs-on: ubuntu-latest
-    uses: yonycalsin/readme-workflows/.github/workflows/metrics.yml@4214fa0b412d47f63cf7cdd1d5e7392b5a1584ed
-    with:
-      branch: 'main'
-    secrets:
-      METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
-      COMMITTER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: yonycalsin/readme-workflows/.github/workflows/metrics.yml@4214fa0b412d47f63cf7cdd1d5e7392b5a1584ed
+        with:
+          branch: 'main'
+        secrets:
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          COMMITTER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
